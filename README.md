@@ -3,7 +3,7 @@
 ## Timers:
 * Pomodoro
 * exercise
-* study timer
+* study
 
 ## Stopwatch: 
 * device usage
