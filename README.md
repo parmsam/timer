@@ -1,2 +1,9 @@
 # timer
-Pomodoro, exercise, and study timer
+
+## Timers:
+* Pomodoro
+* exercise
+* study timer
+
+## Stopwatch: 
+* device usage
