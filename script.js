@@ -6,9 +6,11 @@
 // Set the time we're counting down to
 var countDownTime = new Date();
 //specify number of minutes left
-var timeLeft = 1; //1 minute left
-countDownTime.setMinutes(countDownTime.getMinutes() + timeLeft)
+var timeLeft = 0; //10 minute left
 
+countDownTime.setMinutes(countDownTime.getMinutes() + timeLeft)
+document.getElementById("timer").innerHTML = "TIME IS UP";
+//timeLeft !== 0 &&
 // Update the count down every 1 second
 var x = setInterval(function() {
 
@@ -30,7 +32,11 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("timer").innerHTML = "TIME IS UP";
+    //alert("Your time is up!");
   }
+
 }, 1000);
 //every 1000 ms = 1 sec
+var current = new Date().getTime();
+// document.getElementById("start_time").innerHTML=current;

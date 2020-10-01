@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,13 +11,20 @@
 <p id="timer"></p>
 
 <div id="buttons">
-<button>25 min</button>
-<button>20 min</button>
-<button>15 min</button>
-<button>5 min</button>
-<button>1 min</button>
+<button class="button button_25" id="button_25" onclick="countDownTime = new Date(); countDownTime.setMinutes(countDownTime.getMinutes() + 25);">25 min</button>
+<br>
+<button class="button button_15" id="button_15" onclick="countDownTime = new Date(); countDownTime.setMinutes(countDownTime.getMinutes() + 15);">15 min</button>
+<br>
+<button class="button button_10" id="button_10" onclick="countDownTime = new Date(); countDownTime.setMinutes(countDownTime.getMinutes() + 10);">10 min</button>
+<br>
+<button class="button button_5" id="button_5" onclick="countDownTime = new Date(); countDownTime.setMinutes(countDownTime.getMinutes() + 5);">05 min</button>
+<br>
+<button class="button button_1" id="button_1" onclick="countDownTime = new Date(); countDownTime.setMinutes(countDownTime.getMinutes() + 1);">01 min</button>
 </div>
 <script src="script.js"></script>
+
+<p id="start_time"></p>
+<p id="end_time"></p>
 
 </body>
 </html>
