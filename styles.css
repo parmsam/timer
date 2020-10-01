@@ -2,6 +2,10 @@
   font-family: Palatino, Open Sans;
 }
 
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
 p {
   text-align: center;
   font-size: 60px;
@@ -12,7 +16,7 @@ div {
   text-align: center;
 }
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: Black; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
