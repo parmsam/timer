@@ -6,7 +6,7 @@
 // Set the time we're counting down to
 var countDownTime = new Date();
 //specify number of minutes left
-var timeLeft = 0; //10 minute left
+var timeLeft = 0; //0 minute left initial
 
 countDownTime.setMinutes(countDownTime.getMinutes() + timeLeft)
 document.getElementById("timer").innerHTML = "TIME IS UP";
