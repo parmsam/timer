@@ -37,19 +37,46 @@ div {
 .button_25 {
   background-color: #4CAF50;
   /*color: white;*/
+  border: 2px solid #4CAF50;
 } /* Green */
 .button_15 {
   background-color: #008CBA;
+  border: 2px solid #008CBA;
 } /* Green */
 .button_10 {
   background-color: #f44336;
+  border: 2px solid #f44336;
 } /* Green */
 .button_5 {
   background-color: #ff8c1a;
+  border: 2px solid #ff8c1a;
 } /* Green */
 .button_1 {
   background-color: #cc99ff;
+  border: 2px solid #cc99ff;
 } /* Green */
+
+.button_25:hover {
+  background-color: white; /* Green */
+  color: black;
+}
+.button_15:hover {
+  background-color: white; /* Green */
+  color: black;
+}
+.button_10:hover {
+  background-color: white; /* Green */
+  color: black;
+}
+.button_5:hover {
+  background-color: white; /* Green */
+  color: black;
+}
+.button_1:hover {
+  background-color: white; /* Green */
+  color: black;
+}
+
 
 .same-line{
   text-align: center;
