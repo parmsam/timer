@@ -34,9 +34,32 @@ var x = setInterval(function() {
     //clearInterval(x);
     document.getElementById("timer").innerHTML = "TIME IS UP";
     //alert("Your time is up!");
-  }
-
-}, 1000);
+  }}, 1000);
 //every 1000 ms = 1 sec
 var current = new Date().getTime();
-// document.getElementById("start_time").innerHTML=current;
+
+var getFormattedTime = function (fourDigitTime){
+    var hours24 = parseInt(fourDigitTime.substring(0,2));
+    var hours = ((hours24 + 11) % 12) + 1;
+    var amPm = hours24 > 11 ? 'pm' : 'am';
+    var minutes = fourDigitTime.substring(2);
+
+    if(minutes < 10) {
+      minutes = 0 + minutes;
+    }
+    if(minutes>60){
+        minutes = 60 - minutes;
+        hours = 1 + hour;
+    }
+    return hours + ':' + minutes + amPm;
+};
+
+function set_start_end(time_diff) {
+    var button_time = new Date();
+    document.getElementById("start_time").innerHTML=
+          getFormattedTime(button_time.getHours().toString()+button_time.getMinutes().toString())
+    ;
+    document.getElementById("end_time").innerHTML=
+          getFormattedTime(button_time.getHours().toString()+(button_time.getMinutes()+time_diff).toString())
+    ;
+}
