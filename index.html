@@ -11,15 +11,25 @@
 <p id="timer"></p>
 
 <div id="buttons">
-<button class="button button_25" id="button_25" onclick="countDownTime = new Date(); set_start_end(25); countDownTime.setMinutes(countDownTime.getMinutes() + 25);">25 min</button>
+<button class="button button_25" id="button_25" onclick="countDownTime = new Date(); set_start_end(25); document.getElementById('start_time').style.color = 'black';
+document.getElementById('end_time').style.color = '#4CAF50';
+countDownTime.setMinutes(countDownTime.getMinutes() + 25);">25 min</button>
 <br>
-<button class="button button_15" id="button_15" onclick="countDownTime = new Date(); set_start_end(15); countDownTime.setMinutes(countDownTime.getMinutes() + 15);">15 min</button>
+<button class="button button_15" id="button_15" onclick="countDownTime = new Date(); set_start_end(15);  document.getElementById('start_time').style.color = 'black';
+document.getElementById('end_time').style.color = '#008CBA';
+countDownTime.setMinutes(countDownTime.getMinutes() + 15);">15 min</button>
 <br>
-<button class="button button_10" id="button_10" onclick="countDownTime = new Date(); set_start_end(10); countDownTime.setMinutes(countDownTime.getMinutes() + 10);">10 min</button>
+<button class="button button_10" id="button_10" onclick="countDownTime = new Date(); set_start_end(10);  document.getElementById('start_time').style.color = 'black';
+document.getElementById('end_time').style.color = '#f44336';
+countDownTime.setMinutes(countDownTime.getMinutes() + 10);">10 min</button>
 <br>
-<button class="button button_5" id="button_5" onclick="countDownTime = new Date(); set_start_end(5); countDownTime.setMinutes(countDownTime.getMinutes() + 5);">05 min</button>
+<button class="button button_5" id="button_5" onclick="countDownTime = new Date(); set_start_end(5);  document.getElementById('start_time').style.color = 'black';
+document.getElementById('end_time').style.color = '#ff8c1a';
+countDownTime.setMinutes(countDownTime.getMinutes() + 5);">05 min</button>
 <br>
-<button class="button button_1" id="button_1" onclick="countDownTime = new Date(); set_start_end(1); countDownTime.setMinutes(countDownTime.getMinutes() + 1);">01 min</button>
+<button class="button button_1" id="button_1" onclick="countDownTime = new Date(); set_start_end(1);  document.getElementById('start_time').style.color = 'black';
+document.getElementById('end_time').style.color = '#cc99ff';
+countDownTime.setMinutes(countDownTime.getMinutes() + 1);">01 min</button>
 </div>
 <script src="script.js"></script>
 
@@ -30,6 +40,10 @@
 <p id="to"></p>
 <p id="end_time"></p>
 
-
+<script>
+// document.getElementById("button_25").onclick = function(){
+// 	document.getElementById("start_time").style.color = 'green';
+// };
+</script>
 </body>
 </html>

@@ -44,12 +44,15 @@ var getFormattedTime = function (fourDigitTime){
     var amPm = hours24 > 11 ? 'pm' : 'am';
     var minutes = fourDigitTime.substring(2);
 
-    if(minutes < 10) {
+    if(parseInt(minutes) < 10) {
       minutes = 0 + minutes;
     }
-    if(minutes>60){
-        minutes = 60 - minutes;
-        hours = 1 + hour;
+    if(parseInt(minutes) > 59){
+        minutes = parseInt(minutes)-60;
+        if(parseInt(minutes) < 10) {
+          minutes = "0" + minutes;
+        }
+        hours = 1 + hours;
     }
     return hours + ':' + minutes + amPm;
 };
