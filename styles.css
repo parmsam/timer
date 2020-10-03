@@ -50,3 +50,7 @@ div {
 .button_1 {
   background-color: #cc99ff;
 } /* Green */
+
+.same-line{
+  text-align: center;
+}
