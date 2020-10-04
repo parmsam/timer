@@ -1,6 +1,6 @@
 # timer
 
-## Timers:
+## Uses:
 * study
 * exercise
 * meditate
