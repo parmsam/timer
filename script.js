@@ -9,7 +9,7 @@ var countDownTime = new Date();
 var timeLeft = 0; //0 minute left initial
 
 countDownTime.setMinutes(countDownTime.getMinutes() + timeLeft)
-document.getElementById("timer").innerHTML = "SELECT A TIME";
+document.getElementById("timer").innerHTML = "TIME IS UP";
 //timeLeft !== 0 &&
 // Update the count down every 1 second
 var x = setInterval(function() {
