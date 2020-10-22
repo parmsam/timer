@@ -29,7 +29,7 @@ var x = setInterval(function() {
   document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s" ;
 
   // If the count down is finished, write some text
-  if (distance < 5 && distance > 0){
+  if (distance < 5000 && distance > 0){
     playSound('bump');
   }
   if (distance < 0) {
