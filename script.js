@@ -29,14 +29,15 @@ var x = setInterval(function() {
   document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s" ;
 
   // If the count down is finished, write some text
-  if (distance < 3 && distance > 0.5){
-    playSound('bump');playSound('bump');
+  if (distance < 5 && distance > 0){
+    playSound('bump');
   }
   if (distance < 0) {
     //clearInterval(x);
     document.getElementById("timer").innerHTML = "TIME IS UP";
     //alert("Your time is up!");
-  }}, 1000);
+  }
+}, 1000);
 //every 1000 ms = 1 sec
 var current = new Date().getTime();
 
