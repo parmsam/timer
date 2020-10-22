@@ -32,6 +32,7 @@ var x = setInterval(function() {
   if (distance < 0) {
     //clearInterval(x);
     document.getElementById("timer").innerHTML = "TIME IS UP";
+    playSound('bump');playSound('bump');playSound('bump');
     //alert("Your time is up!");
   }}, 1000);
 //every 1000 ms = 1 sec
