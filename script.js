@@ -41,31 +41,28 @@ var x = setInterval(function() {
 //every 1000 ms = 1 sec
 var current = new Date().getTime();
 
-var getFormattedTime = function (fourDigitTime){
-    var hours24 = parseInt(fourDigitTime.substring(0,2));
-    var hours = ((hours24 + 11) % 12) + 1;
-    var amPm = hours24 > 11 ? 'pm' : 'am';
-    var minutes = fourDigitTime.substring(2);
-
-    if(parseInt(minutes) < 10) {
-      minutes = 0 + minutes;
-    }
-    if(parseInt(minutes) > 59){
-        minutes = parseInt(minutes)-60;
-        if(parseInt(minutes) < 10) {
-          minutes = "0" + minutes;
-        }
-        hours = 1 + hours;
-    }
-    return hours + ':' + minutes + amPm;
-};
+//better time formatted time function based on stackoverflow post
+//https://stackoverflow.com/questions/8888491/how-do-you-display-javascript-datetime-in-12-hour-am-pm-format
+var formatAMPM =  function (date,time_diff=0) {
+  date.setMinutes( date.getMinutes() + time_diff)
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = hours + ':' + minutes + ' ' + ampm;
+  return strTime;
+}
 
 function set_start_end(time_diff) {
     var button_time = new Date();
     document.getElementById("start_time").innerHTML=
-          getFormattedTime(button_time.getHours().toString()+button_time.getMinutes().toString())
+          // formatAMPM(button_time.getHours().toString()+button_time.getMinutes().toString())
+          formatAMPM(button_time)
     ;
     document.getElementById("end_time").innerHTML=
-          getFormattedTime(button_time.getHours().toString()+(button_time.getMinutes()+time_diff).toString())
+          //formatAMPM(button_time.getHours().toString()+(button_time.getMinutes()+time_diff).toString())
+          formatAMPM(button_time, time_diff)
     ;
 }
